@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Main Card */
+.container{
+    width: 100%;
+    max-width: 680px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform: translateY(20px);}
+    to{opacity:1; transform: translateY(0);}
+}
+
+/* Title */
+.form-title{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #4b3ca7;
+    margin-bottom: 20px;
+}
+
+/* Social Login */
+.social-login{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.google-btn,
+.facebook-btn{
+    width: 48%;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.google-btn{
+    background: linear-gradient(135deg,#ff5858,#f857a6);
+}
+
+.facebook-btn{
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.google-btn:hover,
+.facebook-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Form Layout */
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Input Box */
+.user-input-box{
+    width: 48%;
+    margin-bottom: 18px;
+}
+
+.user-input-box label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.user-input-box input{
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    padding: 0 12px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* Interactive Focus */
+.user-input-box input:focus{
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102,126,234,0.4);
+    outline: none;
+}
+
+/* Gender */
+.gender-details-box{
+    margin-top: 10px;
+}
+
+.gender-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #4b3ca7;
+}
+
+.gender-category{
+    margin-top: 10px;
+}
+
+.gender-category input{
+    margin-right: 5px;
+    accent-color: #667eea;
+}
+
+.gender-category label{
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+/* Submit Button */
+.form-submit-btn{
+    margin-top: 30px;
+}
+
+.form-submit-btn input{
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#43cea2,#185a9d);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-submit-btn input:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Responsive */
+@media(max-width: 600px){
+    .user-input-box{
+        width: 100%;
+    }
+
+    .social-login{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .google-btn,
+    .facebook-btn{
+        width: 100%;
+    }
+}
